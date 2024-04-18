@@ -1,0 +1,319 @@
+body {
+    background-image: url(image/background.jpg);
+    background-repeat: repeat;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 標楷體;
+}
+
+/*頂部連結*/
+nav {
+    background-color: #a0785a;
+    text-align: center;
+    width: 100%;
+    padding: 10px 25px;
+    position: fixed;
+    top: 0;
+}
+
+nav a {
+    width: 300px;
+    color: black;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 25px;
+}
+
+nav a:hover {
+    background-color: #6f4137;
+    color: #fff817;
+}
+
+/*基本資料*/
+.box1 {
+    display: flex;
+    background-color: #fad6a5;
+    width: 1200px;
+    margin: 55px auto 10px auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.person_photo img {
+    width: 300px;
+    height: 400px;
+    margin: 20px 0px;
+}
+
+.person_text {
+    width: 800px;
+    height: 380px;
+    border: 2px black dashed;
+    align-content: center;
+}
+
+#name {
+    font-size: 35px;
+    font-weight: 700px;
+    text-shadow: 0.1em 0.1em #808080;
+}
+
+.basic_information {
+    font-size: 23px;
+    font-weight: 600px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    align-items: center;
+}
+
+.connect img {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    justify-items: center;
+    margin: 0px 10px;
+    box-shadow: 0.2em 0.2em #808080;
+}
+
+/*專業技能*/
+.box2 {
+    display: flex;
+    background-color: #fad6a5;
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.all_skill_program {
+    display: flex;
+}
+
+.skill_program {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    width: 500px;
+    margin: 15px 0px;
+}
+
+.skill {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 600;
+    background-color: #635147;
+    color: white;
+    align-content: center;
+    text-align: center;
+    margin: 15px;
+}
+
+.program {
+    font-size: 20px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 7px;
+    border-right-style: solid;
+    border-right-color: #2774ae;
+}
+
+/*動態進度條*/
+#program_c {
+    animation: c 5s ease-out infinite;
+    border-right-width: 225px;
+}
+
+#program_python {
+    animation: python 5s ease-out infinite;
+    border-right-width: 120px;
+}
+
+#program_word {
+    animation: word 5s ease-out infinite;
+    border-right-width: 150px;
+}
+
+#program_powerpoint {
+    animation: powerpoint 5s ease-out infinite;
+    border-right-width: 150px;
+}
+
+#program_html {
+    animation: html 5s ease-out infinite;
+    border-right-width: 240px;
+}
+
+#program_css {
+    animation: css 5s ease-out infinite;
+    border-right-width: 180px;
+}
+
+#program_javascript {
+    animation: javascript 5s ease-out infinite;
+    border-right-width: 30px;
+}
+
+#program_canva {
+    animation: canva 5s ease-out infinite;
+    border-right-width: 165px;
+}
+
+@keyframes c {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 175px;
+    }
+}
+
+@keyframes python {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 120px;
+    }
+}
+
+@keyframes word {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 150px;
+    }
+}
+
+@keyframes powerpoint {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 150px;
+    }
+}
+
+@keyframes html {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 240px;
+    }
+}
+
+@keyframes css {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 180px;
+    }
+}
+
+@keyframes javascript {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 30px;
+    }
+}
+
+@keyframes canva {
+    from {
+        border-right-width: 0px;
+    }
+
+    to {
+        border-right-width: 165px;
+    }
+}
+
+/*未辦成的活動*/
+.box3 {
+    background-color: #fad6a5;
+    width: 1200px;
+    margin: 10px auto;
+}
+
+.title {
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 20px 0px 30px;
+}
+
+.all_concel {
+    display: flex;
+}
+
+.concel {
+    border: 2px dashed black;
+    margin: 10px 20px 10px 10px;
+}
+
+.concel_title {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px;
+    color: #00356b;
+}
+
+.concel_txt {
+    font-size: 19px;
+    align-content: center;
+    margin: -2px 10px 10px 10px;
+}
+
+/*辦活動&&專題*/
+.box4 {
+    display: flex;
+    background-color: #fad6a5;
+    width: 1200px;
+    margin: 10px auto 10px auto;
+    justify-content: space-evenly;
+}
+
+.experience {
+    width: 47%;
+    background-color: white;
+    margin: 15px 0px;
+}
+
+.photo img {
+    width: 96%;
+    height: 380px;
+    margin: 10px;
+}
+
+.txt {
+    font-size: 20px;
+    margin: 0px 15px 10px 15px;
+}
+
+.txt a {
+    text-decoration: none;
+    color: black;
+}
+
+.text_color {
+    color: #26619c;
+    font-weight: 600;
+}
+
+/*照片跑馬燈*/
+marquee img {
+    width: 360px;
+    height: 270px;
+}
