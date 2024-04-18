@@ -1,0 +1,69 @@
+<!doctype>
+<html>
+<body bgcolor="#DC DC DC#" text="#2F 4F 4F#">
+<center>
+<font size="5" face="標楷體">
+二元一次方程式<br>
+<input type="text" id="x1"> X + <input type="text" id="y1"> Y = <input type="text" id="n1"><br>
+<input type="text" id="x2"> X + <input type="text" id="y2"> Y = <input type="text" id="n2"><br>
+<input type="button" value="解" onclick="sol1()"><br>
+X = <input type="text" id="x">   Y = <input type="text" id="y"><p>
+
+<table >
+2x2矩陣行列式值與特徵值
+<tr><th rowspan="2">A</th><th rowspan="2">=</th><th rowspan="2">[</th><th><input type="text" id="a11"> <input type="text" id="a12"></th><th rowspan="2">]</th></tr>
+<tr><th><input type="text" id="a21"> <input type="text" id="a22"></th></tr>
+<tr><th></th><th></th><th></th><th><input type="button" value="解" onclick="sol2()"></th><th></th></tr>
+<tr><th></th><th>det A</th><th>=</th><th><input type="text" id="detA"></th><th></th><th></th></tr>
+<tr><th></th><th>eigenvalue</th><th>=</th><th><input type="text" id="eigenvalue1"></th><th></th></tr>
+<tr><th></th><th>eigenvalue</th><th>=</th><th><input type="text" id="eigenvalue2"></th><th></th></tr>
+</table>
+
+<script>
+function sol1(){
+  var a1=parseInt(document.getElementById("x1").value);
+  var b1=parseInt(document.getElementById("y1").value);
+  var c1=parseInt(document.getElementById("n1").value);
+  var a2=parseInt(document.getElementById("x2").value);
+  var b2=parseInt(document.getElementById("y2").value);
+  var c2=parseInt(document.getElementById("n2").value);
+  var a=a1*a2;
+  var b=b1*a2;
+  var c=c1*a2;
+  var i=a2*a1;
+  var j=b2*a1;
+  var k=c2*a1;
+
+  if((b==j)&&(c==k)){
+    document.getElementById("x").value="無限多解";
+    document.getElementById("y").value="無限多解";
+  }
+  else if((b==j)&&(c!=k)){
+    document.getElementById("x").value="無解";
+    document.getElementById("y").value="無解";
+  }
+  else{
+    var sumy=((k-c)/(j-b));
+    var sumx=((c1-(b1*sumy))/a1);
+    document.getElementById("x").value=sumx;
+    document.getElementById("y").value=sumy;
+  }
+}
+
+function sol2(){
+  var A=parseInt(document.getElementById("a11").value);
+  var B=parseInt(document.getElementById("a12").value);
+  var C=parseInt(document.getElementById("a21").value);
+  var D=parseInt(document.getElementById("a22").value);
+  var DetA=A*D-B*C;
+  var Eigenvalue1=(A+D+Math.sqrt((A+D)**2-4*DetA))/2;
+  var Eigenvalue2=(A+D-Math.sqrt((A+D)**2-4*DetA))/2;
+
+  document.getElementById("detA").value=DetA;
+  document.getElementById("eigenvalue1").value=Eigenvalue1;
+  document.getElementById("eigenvalue2").value=Eigenvalue2;
+}
+</script>
+</center>
+</body>
+</html>
